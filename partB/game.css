@@ -122,7 +122,7 @@ button[type="reset"]:hover {
     flex: 0 0 250px;
 }
 
-#feedback, #score, #result {
+#feedback, #attempts-display, #result {
     background-color: #3b3b3b;
     font-size: 1.2rem;
     padding: 1rem;

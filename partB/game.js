@@ -1,5 +1,5 @@
 var guessInput = document.getElementById("guess");
-var score = document.getElementById("score");
+var attemptsDisplay = document.getElementById("attempts-display");
 var feedback = document.getElementById("feedback");
 var result = document.getElementById("result");
 var resetBtn = document.getElementById("reset-btn");
@@ -17,7 +17,7 @@ function checkGuess(){
     }
 
     attempts++;
-    score.textContent = "Score: " + attempts;
+    attemptsDisplay.textContent = "Attempts: " + attempts;
 
     if (guess === randomNumber) {
         result.textContent = "Result: Congratulations! You guessed the number!";
@@ -35,7 +35,7 @@ resetBtn.addEventListener("click", function() {
     randomNumber = Math.floor(Math.random() * 100) + 1;
     
     // Clear the display text
-    score.textContent = "Score: ";
+    attemptsDisplay.textContent = "Attempts: ";
     feedback.textContent = "Feedback: ";
     result.textContent = "Result: ";
 });
