@@ -13,31 +13,39 @@
     
     <main>
         <div class="title">
-            <h2>Change Currency!</h2>
-            <h2><a href="partB/game.html" class="link">Play Game</a></h2>
+            <h2>Currency Converter</h2>
             <p>Ready to exchange currencies!</p>
-            
+            <br>
+            <p><a href="partB/game.html" class="link">Looking for the Guessing Game?</a></p>
         </div>
         <div class="exchange_table">
-            <form>
-                <label for="amount">Amount:</label>
-                <input type="number" id="amount" name="amount" required>
+            <form id="exchange-form">
+                <div class="input-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter amount..." required>
+                </div>
                 
-                <label for="from_currency">From Currency:</label>
-                <select id="from_currency" name="from_currency" required>
-                    
-                </select>
+                <div class="input-group">
+                    <label for="from_currency">From Currency:</label>
+                    <select id="from_currency" name="from_currency" required>
+                        <option value="" disabled selected>Select Currency</option>
+                    </select>
+                </div>
 
-                <label for="to_currency">To Currency:</label>
-                <select id="to_currency" name="to_currency" required>
-                    
-                </select>
+                <div class="input-group">
+                    <label for="to_currency">To Currency:</label>
+                    <select id="to_currency" name="to_currency" required>
+                        <option value="" disabled selected>Select Currency</option>
+                    </select>
+                </div>
 
-                <button type="button" id="convert-btn">Convert</button>
+                <div class="input-group">
+                    <button type="button" id="convert-btn">Convert Currency</button>
+                </div>
             </form>
         </div>
         <div class="result">
-            <p><strong>Selected Pair:</strong> <span id="pair"></span></p>
+            <p><strong>Selected Pair:</strong> <span id="pair">None</span></p>
             <h2 id="result"></h2>
         </div>
     </main>
