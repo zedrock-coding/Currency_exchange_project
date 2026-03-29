@@ -14,18 +14,30 @@
     <main>
         <div class="title">
             <h2>Guess the Number!</h2>
+            
             <h2><a href="../index.html" class="link">Back to Currency Exchange</a></h2>
         </div>
         <div class="frame">
-            <p class="head" >Welcome to the Guess the Number Game!</p>
-            <p>Try to guess the number between 1 and 100.</p>
-            <form onsubmit="event.preventDefault(); checkGuess();">
-                <input type="number" id="guess" placeholder="Enter your guess" required>
-                <button type="submit" id="submit-btn">Submit Guess</button>
-            </form>
-            <p id="feedback">Feedback: </p>
-            <p id="score">Score: </p>
-            <p id="result">Result: </p>
+            <div class="frame-header">
+                <p class="head" >Welcome to the Guess the Number Game!</p>
+                <p>Try to guess the number between 1 and 100.</p>
+            </div>
+            <div class="game-board">
+                <form onsubmit="event.preventDefault(); checkGuess();" class="game-form">
+                    <div class="side-buttons">
+                        <button type="submit" id="submit-btn">Submit Guess</button>
+                        <button type="reset" onclick="location.reload();">Reset Game</button>
+                    </div>
+                    <div class="mid-input">
+                        <input type="number" id="guess" placeholder="Enter your guess" required>
+                    </div>
+                </form>
+                <div class="right-paras">
+                    <p id="feedback">Feedback: </p>
+                    <p id="score">Score: </p>
+                    <p id="result">Result: </p>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
