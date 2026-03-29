@@ -2,6 +2,7 @@ var guessInput = document.getElementById("guess");
 var score = document.getElementById("score");
 var feedback = document.getElementById("feedback");
 var result = document.getElementById("result");
+var resetBtn = document.getElementById("reset-btn");
 var attempts = 0;
 
 var randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -11,7 +12,7 @@ function checkGuess(){
     
     if (isNaN(guess) || guess < 1 || guess > 100) {
         result.textContent = "Invalid input! Please enter a number between 1 and 100.";
-        feedback.textContent = "";
+        feedback.textContent = "Feedback: Invalid input!";
         return;
     }
 
@@ -29,3 +30,12 @@ function checkGuess(){
         result.textContent = "Result: Keep trying!";
     }
 }
+resetBtn.addEventListener("click", function() {
+    attempts = 0;
+    randomNumber = Math.floor(Math.random() * 100) + 1;
+    
+    // Clear the display text
+    score.textContent = "Score: ";
+    feedback.textContent = "Feedback: ";
+    result.textContent = "Result: ";
+});
