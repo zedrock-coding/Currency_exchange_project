@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <header>
+        <H1>Guess the Number Game</H1>
+    </header>
+    <main>
+        <div class="title">
+            <h2>Guess the Number!</h2>
+            <h2><a href="../index.html" class="link">Back to Currency Exchange</a></h2>
+        </div>
+        <div class="frame">
+            <p class="head" >Welcome to the Guess the Number Game!</p>
+            <p>Try to guess the number between 1 and 100.</p>
+            <form onsubmit="event.preventDefault(); checkGuess();">
+                <input type="number" id="guess" placeholder="Enter your guess" required>
+                <button type="submit" id="submit-btn">Submit Guess</button>
+            </form>
+            <p id="feedback">Feedback: </p>
+            <p id="score">Score: </p>
+            <p id="result">Result: </p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Guess the Number Game. All rights reserved by Lakshya Jadhav.</p>
+    </footer>
+    <script src="game.js"></script>
+</body>
+</html>
